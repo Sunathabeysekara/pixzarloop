@@ -35,7 +35,8 @@ function manageUser($u, $op, $conn)
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                //fetch data for DB accordingly to use rquery and give users information as output
+                //fetch data from DB and give all user information as output updated to give out put as table format
+                
                 echo "ID: " . $row["id"] . " - Name: " . $row["name"] . " - Email: " . $row["email"] . " - Role: " . $row["role"] . "<br>";
             }
         } else {
@@ -60,3 +61,5 @@ function manageUser($u, $op, $conn)
 //);
 
 //manageUser($user, 'add', $conn);
+
+?>
