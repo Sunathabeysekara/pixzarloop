@@ -28,10 +28,10 @@ require_once'config/connect.php';
 require_once'index.php';
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-	$username=$_POST['userid'];
+	$userid=$_POST['userid'];
 	$password=$_POST['password'];
 
-	$query="select id,role from users where id'$userid' and password='$password'";
+	$query="select * from admins where id='$userid' and password='$password'";
 	$result=mysqli_query($connect,$query);
 	$num=mysqli_num_rows($result);
 
@@ -40,9 +40,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 			header('location:home.php');
 	}else{
-		echo '<p style="color: red";>wrong email or password</p>';
+		echo '<p style="color: red";>wrong id or password</p>';
 	}
-
 
 }
 
