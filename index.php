@@ -22,7 +22,7 @@
     <input type="submit" value="Log In" style="margin-left: 740px;margin-top: 12px;">
  
 </form>
-<p>id:1<br>password:admin</p>
+<!--<p>id:1<br>password:admin</p>-->
 <?php
 require_once'config/connect.php';
 require_once'index.php';
